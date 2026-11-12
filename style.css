@@ -768,6 +768,32 @@ html:has(.page-services){scroll-padding-top:150px}
   .hero#home .hero__bg{background-image:url("assets/images/hero-luxury-home-mobile.jpg");background-position:center bottom}
 }
 
+
+/* ---------- Testimonials ---------- */
+.testi__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.testi__card{position:relative;display:flex;flex-direction:column;gap:14px;background:#fff;border-radius:var(--r-md);padding:30px 26px 24px;box-shadow:var(--shadow-sm);border:1px solid transparent;overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .3s}
+.testi__card::before{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:linear-gradient(90deg,var(--green-500),var(--gold-400));transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.testi__card:hover{transform:translateY(-8px);box-shadow:var(--shadow-md);border-color:rgba(102,187,79,.35)}
+.testi__card:hover::before{transform:scaleX(1)}
+.testi__q{position:absolute;right:20px;top:18px;width:40px;height:40px;color:rgba(102,187,79,.22)}
+.testi__card .stars svg{width:17px;height:17px}
+.testi__card blockquote{margin:0;font-family:var(--font-serif);font-style:italic;font-size:1.05rem;line-height:1.6;color:var(--ink);flex:1}
+.testi__author{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid var(--line)}
+.testi__avatar{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--teal-800);color:#fff;font-family:var(--font-serif);font-weight:700;flex:none}
+.testi__author strong{display:block;font-size:.92rem;color:var(--teal-800);line-height:1.3}
+.testi__author small{font-size:.78rem;color:var(--muted)}
+.testi__g{margin-left:auto;width:22px;height:22px}
+.testi__cta{display:flex;justify-content:center;margin-top:34px}
+
+/* FAQ: spacing + links inside answers */
+.faq{padding-top:0}
+.faq__a a{color:var(--green-700);font-weight:600}
+.faq__a a:hover{color:var(--teal-800)}
+
+@media (max-width:960px){
+  .testi__grid{grid-template-columns:1fr}
+}
+
 /* stops the swaying leaf from creating a horizontal scrollbar */
 .hero {
   overflow-x: clip;
